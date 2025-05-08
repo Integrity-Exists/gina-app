@@ -1,43 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Sovereign Academy - Community Directory</title>
-    <link rel="manifest" href="manifest.json">
-    <style>
-        :root {
-            --primary-color: #2C3E50;
-            --secondary-color: #F4D03F;
-            --accent-color: #ECF0F1;
-        }
-        body { background-color: var(--accent-color); color: var(--primary-color); font-family: Arial, sans-serif; padding: 20px; }
-        .navbar { background-color: var(--primary-color); color: var(--secondary-color); padding: 1rem; font-size: 24px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sovereign Academy - Community Directory</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
+    <h1>Community Directory</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="sui-juris.html">Sui Juris</a>
+      <a href="ask-sage.html">Ask Sage</a>
+      <a href="court-prep.html">Court Prep</a>
+      <a href="community.html">Community</a>
+    </nav>
+  </header>
 
-<div class="navbar">
-    <a href="index.html" style="color: var(--secondary-color); margin-right: 20px;">Home</a>
-    <a href="about.html" style="color: var(--secondary-color); margin-right: 20px;">About</a>
-    <a href="contact.html" style="color: var(--secondary-color); margin-right: 20px;">Contact</a>
-    <a href="sui-juris.html" style="color: var(--secondary-color); margin-right: 20px;">Sui Juris</a>
-    <a href="ask-sage.html" style="color: var(--secondary-color); margin-right: 20px;">Ask Sage</a>
-    <a href="court-prep.html" style="color: var(--secondary-color); margin-right: 20px;">Court Prep</a>
-    <a href="community.html" style="color: var(--secondary-color);">Community</a>
-</div>
+  <main>
+    <section>
+      <h2>Join the Sovereign Directory</h2>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-<h1>Community Directory</h1>
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required>
 
-<p>Connect with fellow Sovereign Academy members. (Coming Soon: Submit Your Info)</p>
+        <label for="email">Email (optional):</label>
+        <input type="email" id="email" name="_replyto">
 
-<ul>
-    <li><strong>Gina Lopez</strong> — Virginia — <i>gina@email.com (example)</i></li>
-    <li><strong>John Doe</strong> — Texas — <i>john@email.com (example)</i></li>
-    <!-- Add more members as submitted -->
-</ul>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
 
-<footer style="text-align: center; margin-top: 40px; color: var(--primary-color);">
-    &copy; 2025 Sovereign Academy. All rights reserved.
-</footer>
+    <section>
+      <h2>Community Members</h2>
+      <ul>
+        <li><strong>Gina Lopez</strong> — Virginia — <em>gina@email.com</em></li>
+        <li><strong>John Doe</strong> — Texas — <em>john@email.com</em></li>
+        <!-- Add more members as submitted -->
+      </ul>
+    </section>
+  </main>
 
+  <footer>
+    <p>&copy; 2025 Sovereign Academy. All rights reserved.</p>
+  </footer>
 </body>
 </html>
