@@ -1,60 +1,131 @@
+----- index.html -----
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gina's App - Home</title>
+    <title>Sovereign Academy - Home</title>
     <style>
+        :root {
+            --primary-color: #2C3E50;   /* Royal Blue */
+            --secondary-color: #F4D03F; /* Light Gold */
+            --accent-color: #ECF0F1;    /* Soft White/Silver */
+        }
+
         body {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            color: #333;
-            text-align: center;
-            padding: 0;
-            margin: 0;
+            padding: 20px;
         }
-        nav {
-            background-color: #333;
-            padding: 15px;
+
+        .navbar {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 1rem;
+            font-size: 24px;
         }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #ffcc00;
-        }
-        .content {
-            padding: 40px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+
+        .button {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
+    <div class="navbar">Sovereign Academy - Home</div>
+    <h1>Welcome to Sovereign Academy!</h1>
+    <p>This is the homepage.</p>
+    <button class="button">Learn More</button>
+</body>
+</html>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav>
+----- about.html -----
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About - Sovereign Academy</title>
+    <style>
+        :root {
+            --primary-color: #2C3E50;   /* Royal Blue */
+            --secondary-color: #F4D03F; /* Light Gold */
+            --accent-color: #ECF0F1;    /* Soft White/Silver */
+        }
 
-<div class="content">
-    <h1>Welcome to Gina's App!</h1>
-    <p>This is the official homepage of Gina's app. More amazing things coming soon!</p>
-</div>
+        body {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
 
-<footer>
-    © 2025 Gina Lopez. All rights reserved.
-</footer>
+        .navbar {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 1rem;
+            font-size: 24px;
+        }
 
+        .button {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">Sovereign Academy - About</div>
+    <h1>About Us</h1>
+    <p>Learn more about Sovereign Academy and our mission.</p>
+    <button class="button">Contact Us</button>
+</body>
+</html>
+
+----- contact.html -----
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact - Sovereign Academy</title>
+    <style>
+        :root {
+            --primary-color: #2C3E50;   /* Royal Blue */
+            --secondary-color: #F4D03F; /* Light Gold */
+            --accent-color: #ECF0F1;    /* Soft White/Silver */
+        }
+
+        body {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 1rem;
+            font-size: 24px;
+        }
+
+        .button {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">Sovereign Academy - Contact</div>
+    <h1>Contact Us</h1>
+    <p>Get in touch with Sovereign Academy.</p>
+    <button class="button">Send Message</button>
 </body>
 </html>
