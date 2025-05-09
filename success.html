@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in;
+}
+</style>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thank You - Sovereign Academy</title>
@@ -8,8 +19,9 @@
 </head>
 <body>
   <div class="navbar">Sovereign Academy</div>
-  <h1>Thank You!</h1>
-  <p>Your submission was received. We'll review it and update our community shortly.</p>
+  <h1 class="fade-in">Thank You!</h1>
+<p class="fade-in">Your submission was received. We'll review it and update our community shortly.</p>
+
   <a href="index.html" class="button">Back to Home</a>
 
   <footer style="text-align: center; margin-top: 40px; color: var(--primary-color);">
