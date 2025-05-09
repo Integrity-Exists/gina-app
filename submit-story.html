@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit Your DSS Story</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      color: #2C3E50;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    label {
+      font-weight: bold;
+      margin-top: 15px;
+      display: block;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #003366;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center;">📢 Submit Your DSS Story</h1>
+  <form action="https://formspree.io/f/xeogkwoe" method="POST">
+    <label for="name">Your Name (optional)</label>
+    <input type="text" name="name" id="name" />
+
+    <label for="email">Your Email (if you want a response)</label>
+    <input type="email" name="email" id="email" />
+
+    <label for="story">Your DSS Experience *</label>
+    <textarea name="story" id="story" rows="8" required placeholder="What happened? What helped? What should others know?"></textarea>
+
+    <input type="hidden" name="_redirect" value="https://integrity-exists.github.io/gina-app/dss-thank-you.html" />
+    <button type="submit">📨 Submit My Story</button>
+  </form>
+</body>
+</html>
