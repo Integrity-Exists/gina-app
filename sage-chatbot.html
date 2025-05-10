@@ -99,10 +99,18 @@
 
     // Simulated Sage reply (replace this with actual OpenAI API call if needed)
     setTimeout(() => {
-      const reply = getSageReply(userMsg);
-      chatMsgs.innerHTML += `<p><strong>Sage:</strong> ${reply}</p>`;
-      chatMsgs.scrollTop = chatMsgs.scrollHeight;
-    }, 600);
+      const topic = localStorage.getItem('userTopic') || 'general';
+
+const response = await fetch(`${endpoint}`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ message: userMsg, topic })
+});
+
+const data = await response.json();
+chatMsgs.innerHTML += `<p><strong>Sage:</strong> ${data.reply}</p>`;
+chatMsgs.scrollTop = chatMsgs.scrollHeight;
+
   };
 
   <script>
