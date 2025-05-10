@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Evictions & Housing Help</title> 
-   <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evictions & Housing Help</title>
+  <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -33,9 +33,13 @@
 </head>
 <body>
   <h1>Evictions & Housing Help</h1>
-  <p>If you’ve received a notice to vacate or are facing landlord harassment, this is your battle station. Ask Sage what rights you’ve got and how to respond fast.</p>
+  <p>Need housing support? Learn your rights during an eviction, landlord disputes, or housing discrimination. Sage is here to guide you.</p>
 
-  <!-- Embedded Sage Chatbot -->
+  <script>
+    const endpoint = 'https://ask-sage-g5hds2ybd-gina-lopezs-projects.vercel.app/api/chat';
+  </script>
   <iframe id="sageChatWindow" src="sage-chatbot.html"></iframe>
 </body>
 </html>
+
+
