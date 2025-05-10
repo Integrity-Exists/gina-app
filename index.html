@@ -150,6 +150,23 @@ s0.parentNode.insertBefore(s1,s0);
     localStorage.setItem('userTopic', topic);
     alert(`Topic selected: ${topic}. Sage will tailor your help.`);
   }
+   <script>
+  function getSageReply(msg) {
+    const topic = localStorage.getItem('userTopic') || 'general';
+
+    if (msg.toLowerCase().includes("dss"))
+      return "First thing, don’t panic. Did they provide documentation or just threats?";
+    if (msg.toLowerCase().includes("eviction"))
+      return "They can’t just boot you without notice. Let’s dig into your tenant rights.";
+    if (msg.toLowerCase().includes("custody"))
+      return "You’ve got rights — has there been a formal petition or emergency hearing?";
+    if (msg.toLowerCase().includes("estate"))
+      return "If this is about inheritance, probate, or wills, I’ve got you. What happened?";
+    
+    return `Let’s break this down. You asked about ${topic}. Start with the facts and I’ll guide you from there.`;
+  }
+</script>
+ 
 </script>
 <script>
   const chatBtn = document.createElement('div');
