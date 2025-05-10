@@ -151,7 +151,7 @@ s0.parentNode.insertBefore(s1,s0);
     alert(`Topic selected: ${topic}. Sage will tailor your help.`);
   }
 </script>
-
+<script>
   const chatBtn = document.createElement('div');
   chatBtn.id = 'sageChatBtn';
   chatBtn.textContent = 'Ask Sage';
@@ -173,6 +173,7 @@ s0.parentNode.insertBefore(s1,s0);
   chatBtn.onclick = () => {
     chatWindow.style.display = chatWindow.style.display === 'none' ? 'block' : 'none';
   };
+</script>
         <div class="topic-buttons">
   <button onclick="setTopic('custody')">👨‍👩‍👧 Custody & Family Law</button>
   <button onclick="setTopic('eviction')">🏠 Evictions & Housing</button>
@@ -181,7 +182,6 @@ s0.parentNode.insertBefore(s1,s0);
   <button onclick="setTopic('liberties')">⚖️ Civil Liberties & Due Process</button>
 </div>
 
-</script>
 <script>
   function setTopic(topic) {
     localStorage.setItem('userTopic', topic);
