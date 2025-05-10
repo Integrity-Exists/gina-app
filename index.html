@@ -110,6 +110,31 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!-- End of Tawk.to Script -->
+<!-- Include Sage Chatbot -->
+<iframe src="sage-chatbot.html" style="display: none;"></iframe>
+<script>
+  const chatBtn = document.createElement('div');
+  chatBtn.id = 'sageChatBtn';
+  chatBtn.textContent = 'Ask Sage';
+  document.body.appendChild(chatBtn);
+
+  const chatWindow = document.createElement('iframe');
+  chatWindow.src = 'sage-chatbot.html';
+  chatWindow.id = 'sageChatWindow';
+  chatWindow.style.position = 'fixed';
+  chatWindow.style.bottom = '80px';
+  chatWindow.style.right = '20px';
+  chatWindow.style.width = '300px';
+  chatWindow.style.height = '400px';
+  chatWindow.style.border = 'none';
+  chatWindow.style.display = 'none';
+  chatWindow.style.zIndex = '999';
+  document.body.appendChild(chatWindow);
+
+  chatBtn.onclick = () => {
+    chatWindow.style.display = chatWindow.style.display === 'none' ? 'block' : 'none';
+  };
+</script>
 
 </body>
     <section style="text-align: center; margin: 50px 0;">
