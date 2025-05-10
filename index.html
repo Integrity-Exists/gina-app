@@ -113,6 +113,13 @@ s0.parentNode.insertBefore(s1,s0);
 <!-- Include Sage Chatbot -->
 <iframe src="sage-chatbot.html" style="display: none;"></iframe>
 <script>
+    <script>
+  function selectTopic(topic) {
+    localStorage.setItem('userTopic', topic);
+    alert(`Topic selected: ${topic}. Sage will tailor your help.`);
+  }
+</script>
+
   const chatBtn = document.createElement('div');
   chatBtn.id = 'sageChatBtn';
   chatBtn.textContent = 'Ask Sage';
@@ -135,6 +142,14 @@ s0.parentNode.insertBefore(s1,s0);
     chatWindow.style.display = chatWindow.style.display === 'none' ? 'block' : 'none';
   };
 </script>
+<div id="topic-buttons" style="margin: 20px; text-align: center;">
+  <h2>What Do You Need Help With?</h2>
+  <button onclick="selectTopic('custody')">Custody & Family Law</button>
+  <button onclick="selectTopic('eviction')">Evictions & Housing</button>
+  <button onclick="selectTopic('records')">Criminal Records</button>
+  <button onclick="selectTopic('dss')">CPS & DSS Defense</button>
+  <button onclick="selectTopic('liberties')">Civil Liberties</button>
+</div>
 
 </body>
     <section style="text-align: center; margin: 50px 0;">
