@@ -79,6 +79,38 @@
             cursor: pointer;
         }
     </style>
+    <script>
+  function selectTopic(topic) {
+    localStorage.setItem('userTopic', topic);
+    alert(`Topic selected: ${topic}. Sage will tailor your help.`);
+  }
+</script>
+<style>
+  .topic-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .topic-buttons button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #2c3e50;
+    color: #fff;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .topic-buttons button:hover {
+    background-color: #34495e;
+    transform: scale(1.05);
+  }
+</style>
+
 </head>
 <body>
     <div class="navbar">Sovereign Academy - Home</div>
@@ -141,15 +173,21 @@ s0.parentNode.insertBefore(s1,s0);
   chatBtn.onclick = () => {
     chatWindow.style.display = chatWindow.style.display === 'none' ? 'block' : 'none';
   };
-</script>
-<div id="topic-buttons" style="margin: 20px; text-align: center;">
-  <h2>What Do You Need Help With?</h2>
-  <button onclick="selectTopic('custody')">Custody & Family Law</button>
-  <button onclick="selectTopic('eviction')">Evictions & Housing</button>
-  <button onclick="selectTopic('records')">Criminal Records</button>
-  <button onclick="selectTopic('dss')">CPS & DSS Defense</button>
-  <button onclick="selectTopic('liberties')">Civil Liberties</button>
+        <div class="topic-buttons">
+  <button onclick="setTopic('custody')">👨‍👩‍👧 Custody & Family Law</button>
+  <button onclick="setTopic('eviction')">🏠 Evictions & Housing</button>
+  <button onclick="setTopic('records')">📂 Criminal Records & Rights</button>
+  <button onclick="setTopic('dss')">🧾 CPS & DSS Defense</button>
+  <button onclick="setTopic('liberties')">⚖️ Civil Liberties & Due Process</button>
 </div>
+
+</script>
+<script>
+  function setTopic(topic) {
+    localStorage.setItem('userTopic', topic);
+    alert(`Topic set to: ${topic}`);
+  }
+</script>
 
 </body>
     <section style="text-align: center; margin: 50px 0;">
