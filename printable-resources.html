@@ -57,6 +57,16 @@
     <li><a href="motion-to-dismiss.docx" download>📄 Motion to Dismiss Template (DOCX)</a></li>
     <li><a href="notice-of-appearance.docx" download>📝 Notice of Appearance (DOCX)</a></li>
   </ul>
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log('Service Worker registered ✅', reg))
+        .catch(err => console.error('Service Worker registration failed ❌', err));
+    });
+  }
+</script>
+
 
   <p><a href="index.html">⬅️ Return to Home</a></p>
   <script src="smart-search.js"></script>
