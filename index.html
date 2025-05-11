@@ -6,6 +6,12 @@
     <div style="background-color: #fff8dc; color: #444; padding: 15px; text-align: center; font-weight: bold; border-bottom: 2px solid #ccc;">
   🚧 Sovereign Academy is still under active construction — but we're already live and ready to help! Check back often for new topics and tools. 💪
   </div>
+    <div style="text-align: center; margin-top: 20px;">
+  <button id="installBtn" style="padding: 10px 20px; font-size: 16px; border-radius: 6px; cursor: pointer; display: none;">
+    📲 Install Sovereign Academy App
+  </button>
+</div>
+
 
     <link rel="manifest" href="manifest.json">
 
@@ -236,6 +242,30 @@ s0.parentNode.insertBefore(s1,s0);
     });
   }
 </script>
+        <script>
+  let deferredPrompt;
+  const installBtn = document.getElementById('installBtn');
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    installBtn.style.display = 'inline-block';
+  });
+
+  installBtn.addEventListener('click', () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('App installed');
+        }
+        deferredPrompt = null;
+        installBtn.style.display = 'none';
+      });
+    }
+  });
+</script>
+
 
 
 </body>
