@@ -41,7 +41,17 @@
 
   <h1>Legal Remedies for Incarcerated Individuals</h1>
   <p>If you're locked up or advocating for someone who is, this is where the fight starts. Learn about state and federal remedies including habeas corpus, sentence reduction motions, compassionate release, and clemency options. Sage can help break down what’s possible and how to begin.</p>
-  
+
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log('Service Worker registered ✅', reg))
+        .catch(err => console.error('Service Worker registration failed ❌', err));
+    });
+  }
+</script>
+
   <!-- Embedded Sage Chatbot -->
   <iframe id="sageChatWindow" src="sage-chatbot.html"></iframe>
   <script src="smart-search.js"></script>
