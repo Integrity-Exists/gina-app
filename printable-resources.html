@@ -40,6 +40,14 @@
          onkeyup="smartNavigate(this.value)">
   <span style="position: absolute; right: 22%; top: 50%; transform: translateY(-50%); font-size: 18px; color: #999;">🔍</span>
 </div>
+  <ul id="smartSuggestions" style="list-style: none; padding: 0; margin: 5px auto 0; width: 60%; text-align: left; display: none; border: 1px solid #ccc; border-radius: 6px; background: #fff; font-size: 16px; max-height: 150px; overflow-y: auto;"></ul>
+
+<div style="text-align: center; margin-top: 10px;">
+  <button onclick="startVoiceSearch()" style="padding: 10px 20px; font-size: 16px; border-radius: 6px; cursor: pointer;">
+    🎤 Voice Search
+  </button>
+</div>
+
 
   <h1>📄 Printable Legal Resources</h1>
   <p>Need tools for court, DSS disputes, or representing yourself? Download and print these battle-tested documents.</p>
@@ -51,6 +59,9 @@
   </ul>
 
   <p><a href="index.html">⬅️ Return to Home</a></p>
+  <script src="smart-search.js"></script>
+  <script src="voice-search.js"></script>
+
 </body>
 </html>
 
