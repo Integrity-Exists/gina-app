@@ -74,8 +74,7 @@
   </button>
 </div>
 
-
-      for (const keyword in routes) {
+       for (const keyword in routes) {
         if (query.includes(keyword)) {
           window.location.href = routes[keyword];
           break;
@@ -83,6 +82,16 @@
       }
     }
   </script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log('Service Worker registered ✅', reg))
+        .catch(err => console.error('Service Worker registration failed ❌', err));
+    });
+  }
+</script>
+
 
   <!-- Embedded Sage Chatbot -->
   <iframe id="sageChatWindow" src="sage-chatbot.html"></iframe>
