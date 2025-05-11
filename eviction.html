@@ -50,6 +50,16 @@
     </button>
   </div>
 </div>
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log('Service Worker registered ✅', reg))
+        .catch(err => console.error('Service Worker registration failed ❌', err));
+    });
+  }
+</script>
+
 
   <script>
     const endpoint = 'https://ask-sage-g5hds2ybd-gina-lopezs-projects.vercel.app/api/chat';
