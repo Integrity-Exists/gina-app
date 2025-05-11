@@ -71,5 +71,40 @@ list.appendChild(li);
 });
 </script>
 
+<script>
+// --- Auto-save case notes every 5 seconds ---
+const notesArea = document.getElementById("caseNotes");
+notesArea.value = localStorage.getItem("caseNotes") || "";
+notesArea.addEventListener("input", () => {
+  localStorage.setItem("caseNotes", notesArea.value);
+});
+
+// --- Save and load court date reminders ---
+const reminderList = document.getElementById("reminderList");
+const savedReminders = JSON.parse(localStorage.getItem("courtReminders")) || [];
+
+function renderReminders() {
+  reminderList.innerHTML = "";
+  savedReminders.forEach(({ date, desc }) => {
+    const li = document.createElement("li");
+    li.textContent = `${date} – ${desc}`;
+    reminderList.appendChild(li);
+  });
+}
+renderReminders();
+
+function addReminder() {
+  const date = document.getElementById("courtDate").value;
+  const desc = document.getElementById("eventDescription").value;
+  if (!date || !desc) return alert("Enter both date and description.");
+  const newReminder = { date, desc };
+  savedReminders.push(newReminder);
+  localStorage.setItem("courtReminders", JSON.stringify(savedReminders));
+  renderReminders();
+}
+</script>
+mycase_script_upgrade.html
+Displaying mycase_script_upgrade.html.
+
 </body>
 </html>
