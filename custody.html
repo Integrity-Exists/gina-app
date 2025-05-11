@@ -34,11 +34,19 @@
 <body>
   <h1>Custody & Family Law Help</h1>
   <p>Welcome to your legal support hub for custody and family law questions. Ask Sage anything — visitation, parenting plans, or emergency hearings.</p>
+  <div style="text-align: center; margin-top: 40px; position: relative;">
+  <input type="text" id="smartSearch" placeholder="🔍 Search legal topics..." 
+         style="padding: 10px 40px 10px 20px; width: 60%; font-size: 16px; border-radius: 6px; border: 1px solid #ccc;" 
+         onkeyup="smartNavigate(this.value)">
+  <span style="position: absolute; right: 22%; top: 50%; transform: translateY(-50%); font-size: 1
+</div>
+8px; color: #999;">🔍</span>
 
   <script>
     const endpoint = 'https://ask-sage-g5hds2ybd-gina-lopezs-projects.vercel.app/api/chat';
   </script>
   <iframe id="sageChatWindow" src="sage-chatbot.html"></iframe>
+   <script src="smart-search.js"></script>
 </body>
 </html>
 
