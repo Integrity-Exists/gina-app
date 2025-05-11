@@ -32,10 +32,18 @@
   </style>
 </head>
 <body>
+  <div style="text-align: center; margin-top: 40px; position: relative;">
+  <input type="text" id="smartSearch" placeholder="🔍 Search legal topics..." 
+         style="padding: 10px 40px 10px 20px; width: 60%; font-size: 16px; border-radius: 6px; border: 1px solid #ccc;" 
+         onkeyup="smartNavigate(this.value)">
+  <span style="position: absolute; right: 22%; top: 50%; transform: translateY(-50%); font-size: 18px; color: #999;">🔍</span>
+</div>
+
   <h1>Legal Remedies for Incarcerated Individuals</h1>
   <p>If you're locked up or advocating for someone who is, this is where the fight starts. Learn about state and federal remedies including habeas corpus, sentence reduction motions, compassionate release, and clemency options. Sage can help break down what’s possible and how to begin.</p>
-
+  
   <!-- Embedded Sage Chatbot -->
   <iframe id="sageChatWindow" src="sage-chatbot.html"></iframe>
+  <script src="smart-search.js"></script>
 </body>
 </html>
