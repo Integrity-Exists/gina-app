@@ -28,6 +28,9 @@
     <section>
   <h2>What is Sui Juris?</h2>
   <p>Sui Juris means representing yourself in court without an attorney. It empowers individuals to assert their legal rights independently, using their own knowledge and preparation.</p>
+  <script src="smart-search.js"></script>
+
+    </div>
 
   <h2>Self-Representation Resources:</h2>
   <ul>
@@ -43,10 +46,28 @@
 </section>
 
 <p>Learn how to represent yourself in court, file motions, and assert your rights as a sovereign individual. Resources and downloadable templates coming soon.</p>
+<div style="text-align: center; margin-top: 40px; position: relative;">
+  <input type="text" id="smartSearch" placeholder="🔍 Search legal topics..." 
+         style="padding: 10px 40px 10px 20px; width: 60%; font-size: 16px; border-radius: 6px; border: 1px solid #ccc;" 
+         onkeyup="smartNavigate(this.value)">
+  <span style="position: absolute; right: 22%; top: 50%; transform: translateY(-50%); font-size: 18px; color: #999;">🔍</span>
+<ul id="smartSuggestions" style="list-style: none; padding: 0; margin: 5px auto 0; width: 60%; text-align: left; display: none; border: 1px solid #ccc; border-radius: 6px; background: #fff; font-size: 16px; max-height: 150px; overflow-y: auto;"></ul>
+<div style="margin-top: 30px;">
+
+<div style="text-align: center; margin-top: 10px;">
+  <button onclick="startVoiceSearch()" style="padding: 10px 20px; font-size: 16px; border-radius: 6px; cursor: pointer;">
+    🎤 Voice Search
+  </button>
+</div>
+
+</div>
 
 <footer style="text-align: center; margin-top: 40px; color: var(--primary-color);">
     &copy; 2025 Sovereign Academy. All rights reserved.
 </footer>
+
+<script src="smart-search.js"></script>
+<script src="voice-search.js"></script>
 
 </body>
 </html>
